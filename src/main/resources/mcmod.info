@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "biomefluidoverhaul",
+  "name": "Biome Fluid Overhaul",
+  "description": "A simple mod that allows you to configure which fluids are infinite in each biome.",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["CrashHermit"],
+  "credits": "The Forge and FML guys, for making Forge and fml",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []

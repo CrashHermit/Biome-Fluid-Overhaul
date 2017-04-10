@@ -1,4 +1,4 @@
-package com.proxy;
+package com.CrashHermit.BiomeFluidOverhaul.proxy;
 
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
