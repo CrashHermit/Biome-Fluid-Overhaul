@@ -1,6 +1,8 @@
 package com.CrashHermit.BiomeFluidOverhaul;
 
-import com.CrashHermit.BiomeFluidOverhaul.BiomeFluidOverhaulEventHandler.BiomeFluidOverhaulEventHandler;
+import com.CrashHermit.BiomeFluidOverhaul.Config.BiomeWaterConfig;
+import com.CrashHermit.BiomeFluidOverhaul.Events.AnvilRepairCostEvent;
+import com.CrashHermit.BiomeFluidOverhaul.Events.InfiniteFluidInBiomesEvent;
 import com.CrashHermit.BiomeFluidOverhaul.proxy.CommonProxy;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
@@ -22,16 +24,12 @@ public class BiomeFluidOverhaul
     @SidedProxy(clientSide = "com.CrashHermit.BiomeFluidOverhaul.proxy.ClientProxy", serverSide = "com.CrashHermit.BiomeFluidOverhaul.proxy.CommonProxy")
     public static CommonProxy proxy;
 
-
-    //Will need this for GUIS and entities
-    @Mod.Instance
-    public static BiomeFluidOverhaul instance;
-
     public static Logger logger;
 
     @EventHandler
-    public void preInit(FMLPreInitializationEvent event)
+    public void preInit(FMLPreInitializationEvent event) throws Exception
     {
+        BiomeWaterConfig.loadConfig();
         logger = event.getModLog();
         proxy.preInit(event);
     }
@@ -45,7 +43,8 @@ public class BiomeFluidOverhaul
     @EventHandler
     public void postInit(FMLPostInitializationEvent event)
     {
-        MinecraftForge.EVENT_BUS.register(new BiomeFluidOverhaulEventHandler());
+        MinecraftForge.EVENT_BUS.register(new InfiniteFluidInBiomesEvent());
+        MinecraftForge.EVENT_BUS.register(new AnvilRepairCostEvent());
         proxy.postInit(event);
     }
 }
