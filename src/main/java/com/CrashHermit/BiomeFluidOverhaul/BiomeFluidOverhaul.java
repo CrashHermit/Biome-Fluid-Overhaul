@@ -1,8 +1,10 @@
 package com.CrashHermit.BiomeFluidOverhaul;
 
 import com.CrashHermit.BiomeFluidOverhaul.Config.BiomeWaterConfig;
-import com.CrashHermit.BiomeFluidOverhaul.Events.AnvilRepairCostEvent;
-import com.CrashHermit.BiomeFluidOverhaul.Events.InfiniteFluidInBiomesEvent;
+import com.CrashHermit.BiomeFluidOverhaul.events.AnvilRepairCostEvent;
+import com.CrashHermit.BiomeFluidOverhaul.events.InfiniteFluidInBiomesEvent;
+import com.CrashHermit.BiomeFluidOverhaul.module.growth.PlantGrowthModule;
+import com.CrashHermit.BiomeFluidOverhaul.module.vanilla.VanillaModule;
 import com.CrashHermit.BiomeFluidOverhaul.proxy.CommonProxy;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
@@ -37,12 +39,15 @@ public class BiomeFluidOverhaul
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
+
+        VanillaModule.init();
         proxy.init(event);
     }
 
     @EventHandler
     public void postInit(FMLPostInitializationEvent event)
     {
+        MinecraftForge.EVENT_BUS.register(new PlantGrowthModule());
         MinecraftForge.EVENT_BUS.register(new InfiniteFluidInBiomesEvent());
         MinecraftForge.EVENT_BUS.register(new AnvilRepairCostEvent());
         proxy.postInit(event);

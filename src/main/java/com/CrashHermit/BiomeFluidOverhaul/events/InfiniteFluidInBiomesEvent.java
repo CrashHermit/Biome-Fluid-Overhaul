@@ -1,4 +1,4 @@
-package com.CrashHermit.BiomeFluidOverhaul.Events;
+package com.CrashHermit.BiomeFluidOverhaul.events;
 
 import com.CrashHermit.BiomeFluidOverhaul.Config.BiomeWaterConfig;
 import net.minecraft.block.material.Material;
@@ -13,6 +13,8 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
  */
 public class InfiniteFluidInBiomesEvent
 {
+    public static Type[] BiomeList;
+
     @SubscribeEvent
     public void waterGenerationPerBiome(CreateFluidSourceEvent event)
     {

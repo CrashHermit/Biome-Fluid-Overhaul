@@ -1,5 +1,6 @@
-package com.CrashHermit.BiomeFluidOverhaul.Events;
+package com.CrashHermit.BiomeFluidOverhaul.events;
 
+import com.CrashHermit.BiomeFluidOverhaul.Config.BiomeWaterConfig;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.AnvilUpdateEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -12,6 +13,6 @@ public class AnvilRepairCostEvent {
     public void onAnvilRepair(AnvilUpdateEvent event)
     {
         ItemStack itemstack1 = event.getLeft();
-        itemstack1.setRepairCost(1);
+        itemstack1.setRepairCost(BiomeWaterConfig.expControl);
     }
 }
