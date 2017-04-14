@@ -1,6 +1,6 @@
 package com.CrashHermit.BiomeFluidOverhaul;
 
-import com.CrashHermit.BiomeFluidOverhaul.Config.BiomeWaterConfig;
+import com.CrashHermit.BiomeFluidOverhaul.config.BiomeWaterConfig;
 import com.CrashHermit.BiomeFluidOverhaul.events.AnvilRepairCostEvent;
 import com.CrashHermit.BiomeFluidOverhaul.events.InfiniteFluidInBiomesEvent;
 import com.CrashHermit.BiomeFluidOverhaul.module.growth.PlantGrowthModule;

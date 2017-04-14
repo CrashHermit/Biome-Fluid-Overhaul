@@ -6,6 +6,7 @@ package com.CrashHermit.BiomeFluidOverhaul.module.growth.modification;
  * Created by joshua on 4/13/17.
  */
 public class PlantGrowthModification {
+
     private boolean needsSunlight = true;
 
     private float growthTickProbability = 0;

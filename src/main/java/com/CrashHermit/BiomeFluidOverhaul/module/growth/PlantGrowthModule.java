@@ -3,7 +3,6 @@ package com.CrashHermit.BiomeFluidOverhaul.module.growth;
 import com.CrashHermit.BiomeFluidOverhaul.Common.RandomHelper;
 import com.CrashHermit.BiomeFluidOverhaul.module.growth.modification.PlantGrowthModification;
 import net.minecraft.block.Block;
-import net.minecraftforge.common.config.Config;
 import net.minecraftforge.fml.common.eventhandler.Event.Result;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.event.world.BlockEvent.CropGrowEvent.Pre;
@@ -92,12 +91,16 @@ public class PlantGrowthModule {
         //random
         if (RandomHelper.nextFloat(event.getWorld().rand, growthTickProbability * sunlightGrowthModifier * temperatureGrowthModifier * humidityGrowthModifier) >= 1)
         {
-            System.out.println("This is growthTickProbability" + growthTickProbability);
             event.setResult(Result.DENY);
+            return;
+        }
+        else
+        {
+            event.setResult(Result.ALLOW);
             return;
         }
 
         // still go though with the default conditionals
-        event.setResult(Result.DEFAULT);
+        //event.setResult(Result.DEFAULT);
     }
 }

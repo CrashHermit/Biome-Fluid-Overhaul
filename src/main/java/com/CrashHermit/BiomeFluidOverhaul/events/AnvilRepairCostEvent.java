@@ -1,6 +1,6 @@
 package com.CrashHermit.BiomeFluidOverhaul.events;
 
-import com.CrashHermit.BiomeFluidOverhaul.Config.BiomeWaterConfig;
+import com.CrashHermit.BiomeFluidOverhaul.config.BiomeWaterConfig;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.AnvilUpdateEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;

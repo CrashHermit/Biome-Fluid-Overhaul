@@ -1,10 +1,9 @@
 package com.CrashHermit.BiomeFluidOverhaul.module.vanilla;
 
-import com.CrashHermit.BiomeFluidOverhaul.Config.BiomeWaterConfig;
+import com.CrashHermit.BiomeFluidOverhaul.config.BiomeWaterConfig;
 import com.CrashHermit.BiomeFluidOverhaul.module.growth.modification.PlantGrowthModification;
 import com.CrashHermit.BiomeFluidOverhaul.module.growth.PlantGrowthModule;
 import net.minecraft.block.*;
-import net.minecraft.world.biome.Biome;
 
 /**
  * Created by joshua on 4/13/17.
@@ -13,9 +12,14 @@ public class VanillaModule {
     public static void init()
     {
         //Wheat
-        PlantGrowthModification cropGrowthModification = new PlantGrowthModification().setNeedsSunlight(BiomeWaterConfig.cropWheatSunlightBoolean).setGrowthTickProbability(BiomeWaterConfig.cropWheatGrowthTickMultiplier).setSunlightGrowthModifier(BiomeWaterConfig.cropWheatGrowthSunlightMultiplier).setTemperatureGrowthModifier(BiomeWaterConfig.cropWheatGrowthTemperatureMultiplier).setHumidityGrowthModifier(BiomeWaterConfig.cropWheatGrowthHumidityMultiplier);
-        PlantGrowthModule.registerPlantGrowthModifier(BlockCrops.class, cropGrowthModification);
-        
+        PlantGrowthModification wheatGrowthModification = new PlantGrowthModification();
+        wheatGrowthModification.setNeedsSunlight(BiomeWaterConfig.cropWheatSunlightBoolean);
+        wheatGrowthModification.setGrowthTickProbability(BiomeWaterConfig.cropWheatGrowthTickMultiplier);
+        wheatGrowthModification.setSunlightGrowthModifier(BiomeWaterConfig.cropWheatGrowthSunlightMultiplier);
+        wheatGrowthModification.setTemperatureGrowthModifier(BiomeWaterConfig.cropWheatGrowthTemperatureMultiplier);
+        wheatGrowthModification.setHumidityGrowthModifier(BiomeWaterConfig.cropWheatGrowthHumidityMultiplier);
+        PlantGrowthModule.registerPlantGrowthModifier(BlockCrops.class, wheatGrowthModification);
+
         //Carrot
         //PlantGrowthModification carrotGrowthModification = new PlantGrowthModification().setNeedsSunlight().setGrowthTickProbability().setSunlightGrowthModifier().setTemperatureGrowthModifier().setHumidityGrowthModifier();
        // PlantGrowthModule.registerPlantGrowthModifier(BlockCarrot.class, carrotGrowthModification);
@@ -29,7 +33,12 @@ public class VanillaModule {
         //PlantGrowthModule.registerPlantGrowthModifier(BlockBeetroot.class, beetrootGrowthModification);
 
         //Reed "Sugarcane"
-        PlantGrowthModification reedGrowthModification = new PlantGrowthModification().setNeedsSunlight(BiomeWaterConfig.cropReedSunlightBoolean).setGrowthTickProbability(BiomeWaterConfig.cropReedGrowthTickMultiplier).setSunlightGrowthModifier(BiomeWaterConfig.cropReedGrowthSunlightMultiplier).setTemperatureGrowthModifier(BiomeWaterConfig.cropReedGrowthTemperatureMultiplier).setHumidityGrowthModifier(BiomeWaterConfig.cropReedGrowthHumidityMultiplier);
+        PlantGrowthModification reedGrowthModification = new PlantGrowthModification();
+        reedGrowthModification.setNeedsSunlight(BiomeWaterConfig.cropReedSunlightBoolean);
+        reedGrowthModification.setGrowthTickProbability(BiomeWaterConfig.cropReedGrowthTickMultiplier);
+        reedGrowthModification.setSunlightGrowthModifier(BiomeWaterConfig.cropReedGrowthSunlightMultiplier);
+        reedGrowthModification.setTemperatureGrowthModifier(BiomeWaterConfig.cropReedGrowthTemperatureMultiplier);
+        reedGrowthModification.setHumidityGrowthModifier(BiomeWaterConfig.cropReedGrowthHumidityMultiplier);
         PlantGrowthModule.registerPlantGrowthModifier(BlockReed.class, reedGrowthModification);
 
         //Stem "Melon"

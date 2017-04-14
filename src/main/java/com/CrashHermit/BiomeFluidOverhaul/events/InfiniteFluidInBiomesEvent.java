@@ -1,6 +1,6 @@
 package com.CrashHermit.BiomeFluidOverhaul.events;
 
-import com.CrashHermit.BiomeFluidOverhaul.Config.BiomeWaterConfig;
+import com.CrashHermit.BiomeFluidOverhaul.config.BiomeWaterConfig;
 import net.minecraft.block.material.Material;
 import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.common.BiomeDictionary.Type;

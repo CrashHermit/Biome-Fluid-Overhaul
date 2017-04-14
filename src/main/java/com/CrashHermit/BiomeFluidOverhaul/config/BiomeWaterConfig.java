@@ -1,4 +1,4 @@
-package com.CrashHermit.BiomeFluidOverhaul.Config;
+package com.CrashHermit.BiomeFluidOverhaul.config;
 
 import net.minecraftforge.common.config.Configuration;
 
@@ -53,17 +53,17 @@ public class BiomeWaterConfig
         //Sunlight multiplier
 
         cropWheatGrowthSunlightMultiplier = config.getFloat("Wheat Crop Sunlight Multiplier", "Sunlight Multipliers", 1.0F, 0.0F, 100.0F, "Comment");
-        cropReedGrowthSunlightMultiplier = config.getFloat("Wheat Crop Sunlight Multiplier", "Sunlight Multipliers", 1.0F, 0.0F, 100.0F, "Comment");
+        cropReedGrowthSunlightMultiplier = config.getFloat("Sugarcane Crop Sunlight Multiplier", "Sunlight Multipliers", 1.0F, 0.0F, 100.0F, "Comment");
 
         //Temperature modifier
 
         cropWheatGrowthTemperatureMultiplier = config.getFloat("Wheat Crop Temperature Multiplier", "Temperature Multipliers", 1.0F, 0.0F, 100.0F, "Comment");
-        cropReedGrowthTemperatureMultiplier = config.getFloat("Wheat Crop Temperature Multiplier", "Temperature Multipliers", 1.0F, 0.0F, 100.0F, "Comment");
+        cropReedGrowthTemperatureMultiplier = config.getFloat("Sugarcane Crop Temperature Multiplier", "Temperature Multipliers", 1.0F, 0.0F, 100.0F, "Comment");
 
         //Humidity modifier
 
         cropWheatGrowthHumidityMultiplier = config.getFloat("Wheat Crop Humidity Multiplier", "Humidity Multipliers", 1.0F, 0.0F, 100.0F, "Comment");
-        cropReedGrowthHumidityMultiplier = config.getFloat("Wheat Crop Humidity Multiplier", "Humidity Multipliers", 1.0F, 0.0F, 100.0F, "Comment");
+        cropReedGrowthHumidityMultiplier = config.getFloat("Sugarcane Crop Humidity Multiplier", "Humidity Multipliers", 1.0F, 0.0F, 100.0F, "Comment");
 
         config.save();
     }
