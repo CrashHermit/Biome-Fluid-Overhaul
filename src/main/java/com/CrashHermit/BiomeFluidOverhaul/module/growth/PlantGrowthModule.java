@@ -1,6 +1,6 @@
 package com.CrashHermit.BiomeFluidOverhaul.module.growth;
 
-import com.CrashHermit.BiomeFluidOverhaul.Common.RandomHelper;
+import com.CrashHermit.BiomeFluidOverhaul.utilities.RandomHelper;
 import com.CrashHermit.BiomeFluidOverhaul.module.growth.modification.PlantGrowthModification;
 import net.minecraft.block.Block;
 import net.minecraftforge.fml.common.eventhandler.Event.Result;

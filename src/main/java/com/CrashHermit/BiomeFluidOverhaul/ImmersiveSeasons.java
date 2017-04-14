@@ -16,14 +16,14 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 import org.apache.logging.log4j.Logger;
 
-@Mod(modid = BiomeFluidOverhaul.MODID, version = BiomeFluidOverhaul.VERSION, name = BiomeFluidOverhaul.NAME)
-public class BiomeFluidOverhaul
+@Mod(modid = ImmersiveSeasons.MODID, version = ImmersiveSeasons.VERSION, name = ImmersiveSeasons.NAME)
+public class ImmersiveSeasons
 {
-    public static final String MODID = "biomefluidoverhaul";
+    public static final String MODID = "immersiveseasons";
     public static final String VERSION = "1.0";
-    public static final String NAME = "Biome Fluid Overhaul";
+    public static final String NAME = "Immersive Seasons";
 
-    @SidedProxy(clientSide = "com.CrashHermit.BiomeFluidOverhaul.proxy.ClientProxy", serverSide = "com.CrashHermit.BiomeFluidOverhaul.proxy.CommonProxy")
+    @SidedProxy(clientSide = "com.CrashHermit.ImmersiveSeasons.proxy.ClientProxy", serverSide = "com.CrashHermit.ImmersiveSeasons.proxy.CommonProxy")
     public static CommonProxy proxy;
 
     public static Logger logger;

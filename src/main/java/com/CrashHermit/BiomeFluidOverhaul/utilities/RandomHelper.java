@@ -1,4 +1,4 @@
-package com.CrashHermit.BiomeFluidOverhaul.Common;
+package com.CrashHermit.BiomeFluidOverhaul.utilities;
 
 import java.util.Random;
 

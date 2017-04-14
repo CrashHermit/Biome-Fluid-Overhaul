@@ -14,6 +14,7 @@ public class ClimateModification
     public float getBiomeBaseTemperature(Biome biome)
     {
         biomeBaseTemperature = biome.getTemperature();
+
         return biomeBaseTemperature;
     }
 
